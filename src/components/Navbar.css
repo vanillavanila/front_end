@@ -1,0 +1,244 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s ease;
+  padding: 1.5rem 0;
+}
+
+.navbar.scrolled {
+  padding: 1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: calc(100% - 80);
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border);
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu.open {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute; 
+  top: 100%;          
+  left: 0;
+  min-width: 200px;
+  background-color: white; 
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  z-index: 100;       
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem; 
+  overflow-y: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px; 
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0f0f0;
+}
+
+.dropdown-item {
+  padding: 0.8rem 1.2rem;
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  line-height: 1.2;
+}
+
+.dropdown-item:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding-left: 1.5rem;
+}
+
+/* Responsif untuk layar laptop standar */
+@media (max-width: 1200px) {
+  .nav-link {
+    font-size: 16px !important;
+    gap: 2px !important;
+  }
+  .logo-text {
+    font-size: 1.1rem;
+  }
+}
+
+button{
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Styling List Item Mobile */
+.mobile-nav-item {
+  list-style: none;
+  border-bottom: 1px solid #edf2f7;
+}
+
+/* Tombol Menu Utama di Mobile */
+.mobile-nav-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mobile-nav-button.active {
+  color: #2563eb;
+  background-color: #f8fafc;
+}
+
+.mobile-submenu {
+  display: none; 
+  background-color: #f9fafb;
+  flex-direction: column;
+}
+
+.mobile-submenu.show {
+  display: flex; 
+}
+
+.mobile-submenu-link {
+  padding: 0.75rem 2rem; 
+  font-size: 0.9rem;
+  color: #4a5568;
+  text-decoration: none;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-submenu-link:active {
+  background-color: #e2e8f0;
+}
+
+
+.chevron-icon {
+  transition: transform 0.3s ease;
+}
+
+.chevron-icon.rotate {
+  transform: rotate(180deg);
+}

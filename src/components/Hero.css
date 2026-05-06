@@ -1,0 +1,52 @@
+.hero {
+  min-height: 100vh;
+  padding-top: 5rem; /* Account for navbar */
+  background: radial-gradient(circle at center, var(--bg-card) 0%, var(--bg-main) 100%);
+}
+
+.hero-bg-shape {
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.shape-1 {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(37, 99, 235, 0.15); /* Primary */
+  top: -10%;
+  left: -10%;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(245, 158, 11, 0.1); /* Secondary */
+  bottom: -10%;
+  right: -5%;
+}
+
+.shape-3 {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(96, 165, 250, 0.15); /* Primary Light */
+  top: 40%;
+  left: 60%;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
