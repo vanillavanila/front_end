@@ -1,0 +1,25 @@
+.video-background-container {
+  position: absolute; /* Wajib absolute agar menempel di background section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Di bawah konten utama (z-10) */
+  overflow: hidden;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Biar video responsif memenuhi layar tanpa distorsi */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Menggelapkan video agar teks putih terbaca */
+  z-index: 1; 
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, GraduationCap, ChevronDown } from 'lucide-react';
+import logosmk from '../assets/logosmk.png'
 import './Navbar.css';
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuData = [
+    const menuData = [
     {
       id: 'profil',
       title: 'Profil',
@@ -25,26 +26,6 @@ const Navbar = () => {
         { name: 'Guru', href: '#guru' },
         { name: 'Pegawai', href: '#pegawai' },
         { name: 'SIM', href: '#sim' },
-      ]
-    },
-     {
-      id: 'kejuruan',
-      title: 'Kejuruan',
-      links: [
-        { name: 'RPL', href: '#rpl'},
-        { name: 'TKJ', href: '#tkj'},
-        { name: 'TPM', href: '#tpm'},
-        { name: 'TPL', href: '#tpl'},
-        { name: 'TESHA',href:'#TESHA'},
-        { name: 'TJAT',href: '#tjat'},
-        { name: 'TELIN',href:'#telin'},
-        { name: 'TAV', href: '#tav'},
-        { name: 'DPIB', href:'#dpib'},
-        { name: 'TSM', href: '#tsm'},
-        { name: 'TKR', href: '#tkr'},
-        { name: 'TITL', href: '#titl'},
-        { name: 'TKP', href: '#tkp'},
-        { name: 'Prestasi', href: '#Prestasi'},
       ]
     },
     {
@@ -62,7 +43,6 @@ const Navbar = () => {
       title: 'Kesiswaan',
       links: [
         { name: 'Peserta Didik', href: '#siswa' },
-        { name: 'Dapodik', href: '#dapodik' },
         { name: 'Ekstra Kurikuler', href: '#ekskul' },
         { name: 'Alumni', href: '#alumni' },
         { name: 'Prestasi', href: '#prestasi-siswa' },
@@ -70,23 +50,44 @@ const Navbar = () => {
     },
     {
       id: 'kurikulum',
-      title: 'Wakakurikulum',
+      title: 'Kurikulum',
       links: [
         { name: 'PPDB', href: '#ppdb' },
+        { name: 'Dapodik', href: '#dapodik' },
         { name: 'Kelulusan', href: '#lulus' },
         { name: 'E-Raport', href: '#eraport' },
         { name: 'Presensi', href: '#presensi' },
         { name: 'KBM', href: '#kbm' },
         { name: 'JIBAS', href: '#jibas' },
-        { name: 'Uraian Siswa', href: '#uraian' },
+        { name: 'Ujian Siswa', href: '#uraian' },
         { name: 'Uji Kompetensi', href: '#ukk' },
+      ]
+    },
+    {
+      id: 'kejuruan',
+      title: 'Kejuruan',
+      links: [
+        { name: 'RPL', href: '/jurusan/rpl'},
+        { name: 'TKJ', href: '/jurusan/tkj'},
+        { name: 'TPM', href: '/jurusan/tpm'},
+        { name: 'TPL', href: '/jurusan/tpl'},
+        { name: 'TESHA',href:'/jurusan/tesha'},
+        { name: 'TJAT',href: '/jurusan/tjat'},
+        { name: 'TELIN',href:'/jurusan/telin'},
+        { name: 'TAV', href: '/jurusan/tav'},
+        { name: 'DPIB', href:'/jurusan/dpib'},
+        { name: 'TSM', href: '/jurusan/tsm'},
+        { name: 'TKR', href: '/jurusan/tkr'},
+        { name: 'TITL', href: '/jurusan/titl'},
+        { name: 'TKP', href: '/jurusan/tkp'},
+        { name: 'Praktik', href: '#Praktik'},
       ]
     },
     {
       id: 'keuangan',
       title: 'Keuangan',
       links: [
-        { name: 'BJS', href: '#bjs' },
+        { name: 'BOS', href: '#bos' },
         { name: 'BPP', href: '#bpp' },
       ]
     },
@@ -98,7 +99,7 @@ const Navbar = () => {
         { name: 'Ruang Bengkel', href: '#bengkel' },
         { name: 'Perpustakaan', href: '#perpus' },
         { name: 'TEFA', href: '#tefa' },
-        { name: 'Kelas Samping', href: '#kelas' },
+        { name: 'Kelas Samsung', href: '#kelas' },
       ]
     },
     {
@@ -106,7 +107,7 @@ const Navbar = () => {
       title: 'No MTA',
       links: [
         { name: 'Telpon', href: 'tel:#' },
-        { name: 'Mamat', href: '#mamat' },
+        { name: 'Email', href: '#Email' },
       ]
     }
   ];
@@ -114,8 +115,8 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled glass' : ''}`}>
       <div className="container navbar-container">
-        <a href="#" className="logo-container">
-          <GraduationCap className="logo-icon text-primary" size={32} />
+        <a href="/" className="logo-container">
+          <img src={logosmk} alt="logo smk" width={40} className='rounded-xl'/>
           <span className="logo-text">SMKN 1 PRINGGABAYA</span>
         </a>
 

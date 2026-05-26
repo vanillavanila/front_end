@@ -6,11 +6,14 @@
   z-index: 50;
   transition: all 0.3s ease;
   padding: 1.5rem 0;
+  height: auto;
+  background-color: #dddddd;
 }
 
 .navbar.scrolled {
   padding: 1rem 0;
   box-shadow: var(--shadow-sm);
+  background-color: transparent;
 }
 
 .navbar-container {
@@ -27,7 +30,7 @@
 
 .logo-text {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--text-main);
   letter-spacing: -0.02em;
 }
@@ -38,10 +41,11 @@
 }
 
 .nav-link {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--text-main);
   transition: color 0.3s ease;
   position: relative;
+  cursor: pointer;
 }
 
 .nav-link::after {
@@ -51,12 +55,12 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: var(--primary);
+  background-color: #000000;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--primary);
+  color: #09249b;
 }
 
 .nav-link:hover::after {
@@ -74,16 +78,29 @@
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 70px;
-  right: 0;
-  width: calc(100% - 80);
-  background-color: var(--bg-card);
-  border-top: 1px solid var(--border);
+  top: 0;
+  left: 0;
+  width: 80%;
+  background-color: rgba(0, 0, 255, 0.8);
   transform-origin: top;
   transform: scaleY(0);
   opacity: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  color: #ffffff;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* Menghilangkan visual scrollbar untuk Chrome, Safari, dan Opera */
+.mobile-menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Menghilangkan visual scrollbar untuk IE, Edge, dan Firefox */
+.mobile-menu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .mobile-menu.open {
@@ -121,7 +138,7 @@
   top: 100%;          
   left: 0;
   min-width: 200px;
-  background-color: white; 
+  background-color: blue; 
   border-radius: 8px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
@@ -129,7 +146,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 0.5rem; 
-  overflow-y: auto;
 }
 
 .nav-links {
@@ -142,7 +158,7 @@
   top: 100%;
   left: 0;
   min-width: 260px; 
-  background-color: white;
+  background-color: blue;
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   padding: 0.5rem 0;
@@ -154,7 +170,7 @@
 
 .dropdown-item {
   padding: 0.8rem 1.2rem;
-  color: #4b5563;
+  color: white;
   text-decoration: none;
   font-size: 0.85rem;
   transition: all 0.2s ease;
@@ -188,7 +204,6 @@ button{
 /* Styling List Item Mobile */
 .mobile-nav-item {
   list-style: none;
-  border-bottom: 1px solid #edf2f7;
 }
 
 /* Tombol Menu Utama di Mobile */
@@ -202,7 +217,7 @@ button{
   border: none;
   font-size: 1rem;
   font-weight: 600;
-  color: #2d3748;
+  color: white;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -214,7 +229,7 @@ button{
 
 .mobile-submenu {
   display: none; 
-  background-color: #f9fafb;
+  background-color: #2563eb;
   flex-direction: column;
 }
 
@@ -225,9 +240,8 @@ button{
 .mobile-submenu-link {
   padding: 0.75rem 2rem; 
   font-size: 0.9rem;
-  color: #4a5568;
+  color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid #f1f5f9;
 }
 
 .mobile-submenu-link:active {

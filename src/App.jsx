@@ -1,34 +1,40 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Welcome from './components/Welcome';
-import Extracurriculars from './components/Extracurriculars';
-import News from './components/News';
 import Footer from './components/Footer';
 
-// Use a smooth scrolling implementation (lenis or just native)
-// We will use CSS scroll behavior for simplicity
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+
+// Pastikan huruf J besar dan nama file sesuai dengan sidebar VS Code kamu
+import LandingPage from './Pages/LandingPage';
+import JurusanPage from './Pages/jurusanPages'; 
+import { Home } from 'lucide-react';
 
 function App() {
   useEffect(() => {
-    // Apply smooth scrolling to the html element
     document.documentElement.style.scrollBehavior = 'smooth';
-    
-    return () => {
-      document.documentElement.style.scrollBehavior = 'auto';
-    };
+    return () => { document.documentElement.style.scrollBehavior = 'auto'; };
   }, []);
 
   return (
     <div className="app-wrapper">
-      <Navbar />
-      <main>
-        <Hero />
-        <Welcome />
-        <Extracurriculars />
-        <News />
-      </main>
-      <Footer />
+      <Router>
+        
+        <main>
+        <Navbar />
+          <Routes>
+            {/* Halaman Home */}
+            <Route path="/" element={<LandingPage />} />
+            {/* Halaman Jurusan Dinamis */}
+            <Route path="/jurusan/:id" element={<JurusanPage />} />
+          </Routes>
+          <br />
+          <br />
+          <br />
+          <br />
+        <Footer />
+        </main>
+
+      </Router>
     </div>
   );
 }

@@ -26,15 +26,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero section relative overflow-hidden flex items-center justify-center" ref={heroRef}>
+    <section className="page hero section relative overflow-hidden flex items-center justify-center" ref={heroRef}>
       {/* Abstract Background Shapes */}
       <div className="absolute hero-bg-shape shape-1"></div>
       <div className="absolute hero-bg-shape shape-2"></div>
       <div className="absolute hero-bg-shape shape-3"></div>
       
       <div className="container relative z-10 text-center">
-        <h1 className="h1 mb-6 text-main">
+        <h1 className="h1 mb-7 text-main">
           <span className="block reveal-text">Selamat Datang di</span>
+          <span className="block reveal-text text-muted">Portal Jurusan</span>
           <span className="block reveal-text text-primary">SMKN 1 Pringgabaya</span>
         </h1>
         <p className="text-lg text-muted mb-8 max-w-2xl mx-auto reveal-text">
@@ -44,7 +45,7 @@ const Hero = () => {
           <a href="#ppdb" className="btn btn-primary">
             Daftar PPDB <ArrowRight className="ml-2" size={20} />
           </a>
-          <a href="#profil" className="btn btn-outline">
+          <a href="#berita" className="btn btn-outline">
             Pelajari Lebih Lanjut
           </a>
         </div>
