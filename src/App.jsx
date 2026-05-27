@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app-wrapper" style={{ overflow: 'hidden' }}>
+    <div className="app-wrapper">
       <Router>
         
         <main>

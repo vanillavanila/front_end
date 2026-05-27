@@ -26,7 +26,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="page hero section relative overflow-hidden flex items-center justify-center" ref={heroRef}>
+    <section className="page hero section relative overflow-hidden flex items-center justify-center" ref={heroRef} style={{ overflow:'hidden' }}>
       {/* Abstract Background Shapes */}
       <div className="absolute hero-bg-shape shape-1"></div>
       <div className="absolute hero-bg-shape shape-2"></div>
