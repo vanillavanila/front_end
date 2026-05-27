@@ -19,7 +19,7 @@ function App() {
     <div className="app-wrapper">
       <Router>
         
-        <main style={{ overflowX:'hidden', ' }}>
+        <main style={{ overflowX:'hidden', padding:'1em' }}>
         <Navbar />
           <Routes>
             {/* Halaman Home */}
