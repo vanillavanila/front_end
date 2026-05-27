@@ -32,7 +32,7 @@ const Footer = () => {
   const Youtube = Icons.Youtube || Icons.YoutubeIcon || Icons.Video;
 
   return (
-    <footer className="footer bg-main border-t border-border" style={{ background:'blue', color:'white', padding:'20px'}}>
+    <footer className="footer bg-main border-t border-border" style={{ background:'blue', color:'white', padding:'20px', paddingLeft:'6px', paddingRight:'6px', position:'relative'}}>
       <div className="container">
         <div className="grid grid-cols-4 gap-8 mb-12">
           <div className="col-span-1">
