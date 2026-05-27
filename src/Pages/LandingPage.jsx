@@ -34,7 +34,7 @@ const index = () => {
 
   return (
     <div>
-      <main>
+      <main style={{ overflowX:'hidden' }}>
         <Navbar />
         <Hero />
         <Extracurriculars />
