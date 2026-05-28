@@ -16,10 +16,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app-wrapper hero">
-      <div className="absolute hero-bg-shape shape-1"></div>
-      <div className="absolute hero-bg-shape shape-2"></div>
-      <div className="absolute hero-bg-shape shape-3"></div>
+    <div className="app-wrapper">
       <Router>
         
         <main>
