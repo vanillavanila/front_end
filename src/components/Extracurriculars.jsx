@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './Ekskul.css';
 import { Code, Music, Trophy, MonitorPlay, Camera, HeartPulse, Bot, FlagTriangleRight, Shield, icons, Footprints, Accessibility, Swords, Languages, Landmark } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +20,7 @@ const Extracurriculars = () => {
     { name: 'Robotik', icon: <Bot size={32} />, color: '#255eb'},
     { name: 'Paskib', icon: <Shield size={32} />, color:'#f58e0b'},
     { name: 'Seni Tari', icon: <Accessibility size={32} />,  color:'#ec4899'},
-    { name: 'Ekskul Bahasa Jepang', icons: <Languages size={32} />, color:'#ef444'},
+    { name: 'Ekskul Bahasa Jepang', icon: <Languages size={32} />, color:'#ef4444'},
     { name: 'Bela Diri(Pencak Silat, Karate)', icon: <Swords size={32} />, color:'#2563eb'}
   ];
 
@@ -48,7 +49,7 @@ const Extracurriculars = () => {
           Kembangkan bakat dan minatmu melalui berbagai kegiatan ekstrakurikuler pilihan yang didukung oleh fasilitas memadai dan pembina profesional.
         </p>
 
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+        <div className="grid gap-4">
           {ekskul.map((item, index) => (
             <div key={index} className="ekskul-card card flex-col items-center justify-center text-center gap-3">
               <div 
