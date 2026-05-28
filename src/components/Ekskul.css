@@ -9,3 +9,8 @@
         flex-direction: column;
     }
 }
+
+.ekskul-card:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
