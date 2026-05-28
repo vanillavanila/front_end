@@ -307,7 +307,7 @@ const Extracurriculars = () => {
   ><span>ℂ</span><span>|</span><span>∥</span><span>∠</span><span>⊥</span
   ><span>≅</span><span>∝</span><span>∴</span><span>∵</span><span>⊕</span
   ><span>⊗</span><span>⊥</span><span>⊢</span><span>⊨</span><span>∇</span>
-      <div className="container text-center">
+      <div className="container ekskul text-center">
         <h2 className="h2 mb-4">Ekstrakurikuler</h2>
         <p className="text-muted mb-12 max-w-2xl mx-auto">
           Kembangkan bakat dan minatmu melalui berbagai kegiatan ekstrakurikuler pilihan yang didukung oleh fasilitas memadai dan pembina profesional.
