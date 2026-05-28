@@ -17,12 +17,13 @@ function App() {
 
   return (
     <div className="app-wrapper hero">
-      <Router>
-        
-        <main>
       <div className="absolute hero-bg-shape shape-1"></div>
       <div className="absolute hero-bg-shape shape-2"></div>
       <div className="absolute hero-bg-shape shape-3"></div>
+      <Router>
+        
+        <main>
+          
         <Navbar />
           <Routes>
             {/* Halaman Home */}
