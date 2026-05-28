@@ -48,7 +48,7 @@ const Extracurriculars = () => {
           Kembangkan bakat dan minatmu melalui berbagai kegiatan ekstrakurikuler pilihan yang didukung oleh fasilitas memadai dan pembina profesional.
         </p>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-4">
           {ekskul.map((item, index) => (
             <div key={index} className="ekskul-card card flex-col items-center justify-center text-center gap-3">
               <div 
