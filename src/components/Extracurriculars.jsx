@@ -42,7 +42,7 @@ const Extracurriculars = () => {
   }, []);
 
   return (
-    <section id="ekskul" className="section bg-main text-center group" ref={sectionRef}>
+    <section id="ekskul" className="container section bg-main text-center group" ref={sectionRef}>
       <div className="container text-center">
         <h2 className="h2 mb-4">Ekstrakurikuler</h2>
         <p className="text-muted mb-12 max-w-2xl mx-auto">
