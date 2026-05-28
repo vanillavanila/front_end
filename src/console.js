@@ -1,4 +1,4 @@
-const teks = "I LOVE YOU ❤️";
+const teks = "I LOVE YOU";
 let index = 0;
 
 for (let y = 25; y > -25; y--) {
@@ -16,7 +16,7 @@ for (let y = 25; y > -25; y--) {
             baris += teks[index % teks.length];
             index++;
         } else {
-            baris += " "; // WAJIB spasi
+            baris += " "; 
         }
     }
 
